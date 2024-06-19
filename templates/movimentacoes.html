@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='logo_CM.svg') }}" alt="Logo">
+        </div>
+        <form action="/registrar_movimentacao" method="post">
+            <div class="form-group">
+                <label for="tipo">Tipo de Movimentação:</label>
+                <select name="tipo" id="tipo">
+                    <option value="entrada">Entrada</option>
+                    <option value="saida">Saída</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" name="quantidade" id="quantidade" required>
+            </div>
+            <div class="form-group">
+                <label for="nome_produto">Nome do Produto:</label>
+                <select name="nome_produto" id="nome_produto">
+                    <option value="COOKIE CLASSICO">COOKIE CLASSICO</option>
+                    <option value="COOKIE BLACK">COOKIE BLACK</option>
+                    <option value="COOKIE MM'S">COOKIE MM'S</option>
+                    <option value="COOKIE WHITE">COOKIE WHITE</option>
+                    <option value="COOKIE TRIPLO">COOKIE TRIPLO</option>
+                    <option value="COOKIE OVOMALTINE">COOKIE OVOMALTINE</option>
+                    <option value="COOKIE NINHO">COOKIE NINHO</option>
+                    <option value="COOKIE CHURROS">COOKIE CHURROS</option>
+                    <option value="COOKIE NUTELLA">COOKIE NUTELLA</option>
+                    <option value="COOKIE RED VELVET">COOKIE RED VELVET</option>
+                    <option value="COOKIE VEGANO">COOKIE VEGANO</option>
+                    <option value="COOKIE NEW YORK">COOKIE NEW YORK</option>
+                    <option value="COOKIE COCO">COOKIE COCO</option>
+                    <option value="COOKIE LIMÃO">COOKIE LIMÃO</option>
+                    <option value="COOKIE MARACUJÁ">COOKIE MARACUJÁ</option>
+                    <option value="COOKIE PET">COOKIE PET</option>
+                    <option value="BROOKIE CLASSICO">BROOKIE CLASSICO</option>
+                    <option value="BROOKIE WHITE">BROOKIE WHITE</option>
+                    <option value="TORTA CLASSICA P">TORTA CLASSICA P</option>
+                    <option value="TORTA NUTELLA P">TORTA NUTELLA P</option>
+                    <option value="MINI BROOKIE CLASSICO">MINI BROOKIE CLASSICO</option>
+                    <option value="MINICOOKIE CLASSICO">MINICOOKIE CLASSICO</option>
+                    <option value="MINICOOKIE RED VELVET">MINICOOKIE RED VELVET</option>
+                    <option value="MINICOOKIE TRIPLO">MINICOOKIE TRIPLO</option>
+                    <option value="MINICOOKIE WHITE">MINICOOKIE WHITE</option>
+                    <option value="MINICOOKIE NUTELLA">MINICOOKIE NUTELLA</option>
+                    <option value="MILK">MILK</option>
+                    <option value="SORVETE COOKIE">SORVETE COOKIE</option>
+                    <option value="COOKIE MONSTER COM OREO">COOKIE MONSTER COM OREO</option>
+                    <option value="MORANGO VEGANO">MORANGO VEGANO</option>
+                    <option value="CHEESECAKE C/ MORANGO">CHEESECAKE C/ MORANGO</option>
+                    <option value="CHOCOLATE AO LEITE">CHOCOLATE AO LEITE</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nome_loja">Nome da Loja:</label>
+                <select name="nome_loja" id="nome_loja">
+                    <option value="Beach Park">Beach Park</option>
+                    <option value="Belém">Belém</option>
+                    <option value="Cariri">Cariri</option>
+                    <option value="Eusébio">Eusébio</option>
+                    <option value="Parangaba">Parangaba</option>
+                    <option value="Praia Grande">Praia Grande</option>
+                    <option value="Rio Mar Kennedy">Rio Mar Kennedy</option>
+                    <option value="Vila Mariana">Vila Mariana</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="data_movimentacao">Data da Movimentação:</label>
+                <input type="date" name="data_movimentacao" id="data_movimentacao" required>
+            </div>
+            <button type="submit">Registrar Movimentação</button>
+        </form>
+    </div>
+</body>
+</html>
